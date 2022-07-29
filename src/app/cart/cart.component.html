@@ -1,0 +1,77 @@
+
+
+
+<div class="row prod adjust">
+    <div class="col-lg-6">
+        <div *ngFor="let cartp of cartProdcs ">
+            <app-cart-product [cartProd]="cartp" (cartProductEmitter)="removeCartProduct(cartp)"></app-cart-product>
+        </div>
+        
+    </div>
+
+    <div *ngIf="cartProdcs.length>0" class="col-lg-6 det " >
+    
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+            <div class="form-group" >
+              <label >Full name</label>
+              <input type="text" name="FullName" #name="ngModel" required minlength="3" [(ngModel)]="customer.FullName" class="form-control"  placeholder="(minimum 3 characters)">
+            </div>
+
+            <div *ngIf="name.invalid && name.dirty">
+              <div *ngIf="name.errors!['required']">
+                Please provide a full name.
+              </div>
+              <div *ngIf="name.errors!['minlength']">
+                The full name must contain at least 3 characters.
+              </div>
+            </div>
+
+
+            <div  class="form-group">
+              <label >Address</label>
+              <input type="text" name="Address" #address="ngModel" required minlength="10" [(ngModel)]="customer.Address" class="form-control"  placeholder="(minimum 10 characters)">
+            </div>
+
+            <div *ngIf="address.invalid && address.dirty">
+              <div *ngIf="address.errors!['required']">
+                Please provide an address.
+              </div>
+              <div *ngIf="address.errors!['minlength']">
+                The address must contain at least 10 characters.
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label >Credit card number</label>
+                <input type="number" onKeyPress="if(this.value.length==16) return false;" name="CreditCard" #credit="ngModel" required minlength="16"  [(ngModel)]="customer.CreditCard" class="form-control"  placeholder="(16-digit number)">
+            </div>
+
+            <div *ngIf="credit.invalid && credit.dirty">
+              <div *ngIf="credit.errors!['required']">
+                Please provide a credit card number.
+              </div>
+              <div *ngIf="credit.errors!['minlength']">
+                The credit card must contain at least 16 characters.
+              </div>
+            </div>
+
+
+              <br>
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+          </form>
+
+        
+
+
+    </div>
+    
+</div>
+
+<div *ngIf="cartProdcs.length>0" class="container "><h3><b>Total: ${{cartServ.calcAmount().toFixed(2)}}</b></h3></div>
+
+
+
+
+    
+

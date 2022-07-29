@@ -1,0 +1,28 @@
+<div class="container adjust">
+
+    <div class="row prod adjust">
+        <div class="col-6 text-center">
+            <img src={{cartProd.product.url}} class="img rounded">
+            <button class="btn btn-outline-danger" (click)="cartProductEmitter.emit(cartProd)">Remove</button>
+        </div>
+
+        <div class="col-6  " >
+        
+            <h3>{{cartProd.product.name}}</h3>
+            <h4>${{cartProd.product.price}}</h4>
+            
+            <label>Amount:</label>
+            <input name="qty" type="number" [(ngModel)]="cartProd.qty" (ngModelChange)="qtyChanged()">
+            
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+    
+
+

@@ -1,0 +1,27 @@
+
+
+    .img
+    {
+        max-width: 65%;
+                
+            max-height: 100%;
+    }
+
+    .det{
+
+        padding-top: 90px;
+    }
+    
+    .adjust {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+.prod
+{
+    padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}

@@ -1,27 +1,21 @@
 # MyStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+MyStore is a web application helps the users to buy the product they want easily. it is including 2 services, one to fetche data from json file and one for adding or deleting on this data. the application builded upon Angular framework and it fetches its data from .json file.
 
-## Development server
+# features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Feature	            	Description
 
-## Code scaffolding
+List Products           	   ✔	Ability of List Products
+view products details          ✔	Ability of viewing full details of Product
+add to shop cart               ✔	Ability of adding new product to shop cart with its quantity
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Purchase Features
 
-## Build
+See Cart	    ✔	Ability to see the Cart and it items
+Remove item	    ✔	Ability of Remove an item from shop cart
+Add Item	    ✔	Ability of add a new Item on the Cart
+edit quantity   ✔	Ability of editing quantities of items
+Checkout	    ✔	Ability to Checkout
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help contact me on (https://www.linkedin.com/in/attia-shaaban-9b730968/).
